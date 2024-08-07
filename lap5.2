@@ -1,0 +1,25 @@
+def x(n):
+     sum = 0
+     for i in range(n):
+        p = int(input("รับราคาสินค้า %d " %(i+1)))
+        sum += p
+     return sum
+
+def T(sum):
+    vat = sum*7/100
+    return vat
+
+def total(a,b,c):
+    t = a+b-c
+    return t
+
+def d(sum):
+    dec = sum*5/100
+    return dec
+
+n = int(input("จำนวนสินค่า"))
+sum = x(n)
+print("ราคารวม %.2f" % sum)
+print("ภาษี %.2f" % T(sum))
+print("ส่วนลด %.2f" % d(sum))
+print("รวมเป็นเงินทั้งสิน %.2f" % total(sum,T(sum),d(sum)))
